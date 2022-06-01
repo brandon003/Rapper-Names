@@ -1,16 +1,21 @@
 
-document.querySelector('button').addEventListener('click',getRappername);
+document.querySelector('button').addEventListener('click',getRapperName);
 
-async function getRappername(){
+async function getRapperName(){
 
+    try{
     const name = document.querySelector('input').value;
     const res = await fetch(`/api/${name}`);
-    const data = await res.json;
-
+    const data = await res.json();
     console.log(data);
     document.querySelector('h2').textContent = data.birthName;
+    }
+    catch{
+        console.log('error');
+    }
 
 }
+
 
 // 
 // const userName = document.querySelector("#userName").value;

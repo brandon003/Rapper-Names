@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-const cors = require('cors');
 const PORT = 8000;
+const cors = require('cors');
 
 app.use(cors());
 
@@ -39,12 +39,19 @@ app.get('/api/:rapperName',(request,response)=>{
 
     const rappersName = request.params.rapperName.toLowerCase(); // gets rapper name of the query parameter
     // response.json(rappers);
-
     if(rappers[rappersName]){ //if rapperName Exists withing rappers, it would evaluate to true
         response.json(rappers[rappersName])
     }else{
         response.json(rappers['dylan']);
     }
+
+});
+
+// to addresss the 404 error when fetching with a blank name
+app.get('/api/', (request, response) => {
+
+    console.log('no name entered');
+    response.json(rappers['dylan']);
 
 });
 
