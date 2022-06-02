@@ -5,7 +5,7 @@ document.querySelector('button').addEventListener('click',getRapperName);
 async function getRapperName(){
 
     const name = document.querySelector('input').value;
-    
+
     try {
     if(name == 'error'){
         throw 'throw error'
@@ -15,7 +15,7 @@ async function getRapperName(){
     console.log(data);
     document.querySelector('h2').textContent = data.birthName;
     } catch (err){
-        console.log(` error.name: ${err.name}, error.message: ${err.message}, name entered was ${name}`);
+        console.log(`error: ${err}, error.name: ${err.name}, error.message: ${err.message}, name entered was ${name}`);
     } finally {
         console.log('finally statement executed');
     }
