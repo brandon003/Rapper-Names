@@ -74,7 +74,15 @@ app.listen(process.env.PORT || PORT, () => {
 
 
 
-
+//Leons api server
 //https://rap-names-api-fun.herokuapp.com/api/
 
+//My heroku server
 // https://simple-rap-api-best.herokuapp.com/
+
+// heroku login //will take you to the browser for login
+// heroku create app/site name, we used simple-rap-api-best
+// echo "web: node server.js" > Procfile //this lets heroku know which is the server file and creates a Procfile doc
+// git add . // add and commit all files before pushing to heroku
+// git commit -m "changes"
+// git push heroku main // push files to heroku from main
