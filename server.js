@@ -78,7 +78,7 @@ app.listen(process.env.PORT || PORT, () => {
 //https://rap-names-api-fun.herokuapp.com/api/
 
 //My heroku server
-// https://simple-rap-api-best.herokuapp.com/
+// https://simple-rap-api-best.herokuapp.com/api
 
 // heroku login //will take you to the browser for login
 // heroku create app/site name, we used simple-rap-api-best
