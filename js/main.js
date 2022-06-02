@@ -1,6 +1,7 @@
 
 document.querySelector('button').addEventListener('click',getRapperName);
 
+//to use with our server.js
 async function getRapperName(){
 
     try{
@@ -16,13 +17,23 @@ async function getRapperName(){
 
 }
 
-
+//to use the heroku server leons version
+// async function getRapperName() {
 // 
-// const userName = document.querySelector("#userName").value;
-// const res = await fetch(`/api?student=${userName}`)
-// const data = await res.json()
+//     try {
+//         const name = document.querySelector('input').value;
+//         const res = await fetch(`https://rap-names-api-fun.herokuapp.com/api/${name}`);
+//         const data = await res.json();
+//         console.log(data);
+//         document.querySelector('h2').textContent = data.birthName;
+//         let strName1 = 'hello, this is a .json string1'
+//         console.log(strName1.json());
+//     }
+//     catch {
+//         let strName2 = 'hello, this is a .json string2';
+//         console.log('error', JSON.stringify(strName2));
+//        
 // 
-// console.log(data);
-// document.querySelector("#personName").textContent = data.name
-// document.querySelector("#personStatus").textContent = data.status
-// document.querySelector("#personOccupation").textContent = data.currentOccupation
+//     }
+// 
+// }

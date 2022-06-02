@@ -9,13 +9,13 @@ const rappers = {
 
 '21 savage':{
     'age':29,
-    'birthName': 'Sheyaa Bin Abraham-Joseph',
+    'birthName': 'Shéyaa Bin Abraham-Joseph',
     'birthLocation': 'London, England'
 },
 'chance the rapper':{
     'age': 29,
-    'birthName': 'Chance the Rapper',
-    'birthLocation': 'London, England'
+    'birthName': 'Chancelor Bennett',
+    'birthLocation': 'Chicago,'
 },
 'dylan': {
     'age': 29,
@@ -28,9 +28,15 @@ app.get('/',(request, response)=>{
     response.sendFile(__dirname + '/index.html') // directory name + html name. It will start looking for the file here
 }) 
 
-// get request for main page aka '/'
+// get request for js/main.js
 app.get('/js/main.js', (request, response) => {
     response.sendFile(__dirname + '/js/main.js') // directory name + js file name. It will start looking for the file here
+}) 
+
+
+// get request for CSS/style.css
+app.get('/CSS/style.css', (request, response) => {
+    response.sendFile(__dirname + '/CSS/style.css') // directory name + css file name. It will start looking for the file here
 }) 
 
 
@@ -41,6 +47,7 @@ app.get('/api/:rapperName',(request,response)=>{
     // response.json(rappers);
     if(rappers[rappersName]){ //if rapperName Exists withing rappers, it would evaluate to true
         response.json(rappers[rappersName])
+        console.log(rappersName, rappers[rappersName], rappers.rappersName);
     }else{
         response.json(rappers['dylan']);
     }
@@ -56,10 +63,11 @@ app.get('/api/', (request, response) => {
 });
 
 
-
 app.listen(process.env.PORT || PORT, () => {
     console.log(`The server is running on port ${PORT}! You better go catch it!`);
 });
 
 
-//https://rap-names-api-fun.herokuapp.com/
+
+
+//https://rap-names-api-fun.herokuapp.com/api/
