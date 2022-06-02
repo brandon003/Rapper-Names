@@ -7,10 +7,27 @@ async function getRapperName(){
     const name = document.querySelector('input').value;
 
     try {
-    if(name == 'error'){
-        throw 'throw error'
-    }
+    if(name == 'error'){  throw 'throw error' };
     const res = await fetch(`/api/${name}`);
+        console.log(
+            `
+            res.headers: ${res.headers},
+            res.bodyUsed: ${res.bodyUsed},
+            res.ok: ${res.ok},
+            res.redirected: ${res.redirected},
+            res.status: ${res.status},
+            res.statusText: ${res.statusText},
+            `)
+
+        // res.blob(): ${res.blob()},
+
+        // res.body: ${res.body},
+        // res.formData(): ${ res.formData() },
+        // res.json(): ${ res.json() },
+        // res.arrayBuffer(): ${ res.arrayBuffer() },
+        // res.clone(): ${ res.clone() },
+
+
     const data = await res.json();
     console.log(data);
     document.querySelector('h2').textContent = data.birthName;
