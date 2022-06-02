@@ -33,10 +33,23 @@ app.get('/',(request, response)=>{
 // get request for js/main.js
 app.get('/js/main.js', (request, response) => {
     response.sendFile(__dirname + '/js/main.js') // directory name + js file name. It will start looking for the file here
-    console.log('js file request, sent js file');
+    console.log('main.js file request, sent js file');
 
 }) 
 
+// // get request for js/greetPerson.js
+// app.get('/js/greetPerson.js', (request, response) => {
+//     response.sendFile(__dirname + '/js/greetPerson.js') // directory name + js file name. It will start looking for the file here
+//     console.log('greetPerson.js file request, sent js file');
+// 
+// }) 
+// 
+// // get request for js/module.js
+// app.get('/js/module.js', (request, response) => {
+//     response.sendFile(__dirname + '/js/module.js') // directory name + js file name. It will start looking for the file here
+//     console.log('module.js file request, sent js file');
+// 
+// }) 
 
 // get request for CSS/style.css
 app.get('/CSS/style.css', (request, response) => {

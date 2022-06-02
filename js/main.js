@@ -22,22 +22,22 @@ async function getRapperName(){
 
 }
 
-// Importing greetPerson from greetPerson.js file
-import { greetPerson } from './greetPerson.js';
-
-// Using greetPerson() defined in greetPerson.js
-let displayName = greetPerson('Codecademy');
-
-console.log(displayName);
-// Output: Hi, Codecademy
-
-import { name, difference } from './module.js';
-
-console.log(name); // Output: Codecademy Docs
-
-let diff = difference(9, 5);
-
-console.log(diff); // Output: 4
+// // Importing greetPerson from greetPerson.js file
+// import { greetPerson } from './greetPerson.js';
+// 
+// // Using greetPerson() defined in greetPerson.js
+// let displayName = greetPerson('Codecademy');
+// 
+// console.log(displayName);
+// // Output: Hi, Codecademy
+// 
+// import { name, difference } from './module.js';
+// 
+// console.log(name); // Output: Codecademy Docs
+// 
+// let diff = difference(9, 5);
+// 
+// console.log(diff); // Output: 4
 
 
 
