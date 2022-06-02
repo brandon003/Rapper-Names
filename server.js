@@ -26,18 +26,23 @@ const rappers = {
 // get request for main page aka '/'
 app.get('/',(request, response)=>{
     response.sendFile(__dirname + '/index.html') // directory name + html name. It will start looking for the file here
+    console.log('html file request, sent html file');
+
 }) 
 
 // get request for js/main.js
 app.get('/js/main.js', (request, response) => {
     response.sendFile(__dirname + '/js/main.js') // directory name + js file name. It will start looking for the file here
+    console.log('js file request, sent js file');
+
 }) 
 
 
 // get request for CSS/style.css
 app.get('/CSS/style.css', (request, response) => {
     response.sendFile(__dirname + '/CSS/style.css') // directory name + css file name. It will start looking for the file here
-}) 
+    console.log('stylesheet request, sent CSS file');
+})
 
 
 //get request for Rap Names API
@@ -47,7 +52,7 @@ app.get('/api/:rapperName',(request,response)=>{
     // response.json(rappers);
     if(rappers[rappersName]){ //if rapperName Exists withing rappers, it would evaluate to true
         response.json(rappers[rappersName])
-        console.log(rappersName, rappers[rappersName], rappers.rappersName);
+        console.log(rappersName, rappers[rappersName]);
     }else{
         response.json(rappers['dylan']);
     }
