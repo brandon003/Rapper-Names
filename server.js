@@ -74,7 +74,7 @@ app.listen(process.env.PORT || PORT, () => {
 
 
 
-//Leons api server
+//Leons heroku api server
 //https://rap-names-api-fun.herokuapp.com/api/
 
 //My heroku server
@@ -86,3 +86,9 @@ app.listen(process.env.PORT || PORT, () => {
 // git add . // add and commit all files before pushing to heroku
 // git commit -m "changes"
 // git push heroku main // push files to heroku from main
+
+
+// remote: https://simple-rap-api-best.herokuapp.com/ deployed to Heroku
+// remote: Verifying deploy...done.
+// To https://git.heroku.com/simple-rap-api-best.git
+// e934cfa..21807c5  main -> main

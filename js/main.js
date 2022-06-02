@@ -4,16 +4,22 @@ document.querySelector('button').addEventListener('click',getRapperName);
 //to use with our server.js
 async function getRapperName(){
 
-    try{
     const name = document.querySelector('input').value;
+    
+    try {
+    if(name == 'error'){
+        throw 'throw error'
+    }
     const res = await fetch(`/api/${name}`);
     const data = await res.json();
     console.log(data);
     document.querySelector('h2').textContent = data.birthName;
+    } catch (err){
+        console.log(` error.name: ${err.name}, error.message: ${err.message}, name entered was ${name}`);
+    } finally {
+        console.log('finally statement executed');
     }
-    catch{
-        console.log('error');
-    }
+
 }
 
 
